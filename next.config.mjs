@@ -2,17 +2,25 @@
 const nextConfig = {
   // Fix untuk Vercel deployment dengan routing groups di Next.js 15
   experimental: {
-    // Memastikan client reference manifest ter-generate dengan benar
     serverActions: {
       bodySizeLimit: '2mb',
     },
   },
-  // Memastikan build konsisten
   typescript: {
     ignoreBuildErrors: false,
   },
   eslint: {
     ignoreDuringBuilds: false,
+  },
+  // Memastikan build output konsisten untuk Vercel
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
   },
 };
 
