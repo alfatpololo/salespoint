@@ -11,7 +11,7 @@ import Testimonial1 from '../Components/Testimonial/Testimonial1';
 import Toolset1 from '../Components/Toolset/Toolset1';
 import Blog1 from '../Components/Blog/Blog1';
 
-const page = () => {
+export default function Page() {
     return (
         <div>
             <HeroBanner1></HeroBanner1>
@@ -28,6 +28,4 @@ const page = () => {
             <Blog1></Blog1>
         </div>
     );
-};
-
-export default page;
+}

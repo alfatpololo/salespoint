@@ -10,7 +10,7 @@ import Pricing2 from '../Components/Pricing/Pricing2';
 import Faq1 from '../Components/Faq/Faq1';
 import Blog2 from '../Components/Blog/Blog2';
 
-const page = () => {
+export default function Page() {
     return (
         <div>
             <HeroBanner2></HeroBanner2>
@@ -26,6 +26,4 @@ const page = () => {
             <Blog2></Blog2>
         </div>
     );
-};
-
-export default page;
+}

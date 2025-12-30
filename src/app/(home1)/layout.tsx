@@ -1,7 +1,7 @@
 import Footer2 from '../Components/Footer/Footer2';
 import Header2 from '../Components/Header/Header2';
 
-const layout = ({ children }) => {
+export default function Layout({ children }) {
     return (
         <div className='main-page-area'>
            <Header2></Header2>
@@ -9,6 +9,4 @@ const layout = ({ children }) => {
             <Footer2></Footer2>
         </div>
     );
-};
-
-export default layout;
+}
